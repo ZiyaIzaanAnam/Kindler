@@ -37,7 +37,6 @@ h3{
 <textarea id="np"></textarea>
 <div>
     <button onclick="save()">Save</button>
-    <button onclick="openFile()">Open</button>
 </div><br><hr>
 <iframe id="finally"></iframe>
 <marquee>
@@ -46,7 +45,7 @@ h3{
 <script>
     function save() {
         var txt= document.getElementById('np').value;
-        var f= ("Note.txt");
+        var f= prompt("Enter File Name:" "Note.txt");
         if (f){
             var b= new Blob([txt], { type: 'text/plain' });
             var a = document.createElement('a');
